@@ -9,12 +9,12 @@ class Runner():
 
     def __init__(self, x = 0, y = 0, custome = None):
         
-        
+        '''
         #coloco imagen del corredor
         for i in range (len(self.__custome)):
 
             self.custome = pygame.image.load("images/{}.png".format(self.__custome[i]))
-        
+        '''
         '''
         #coloco imagen del corredor
         ixCustome = random.randint(0,4)    
@@ -37,7 +37,7 @@ class Game():
 
 
     # Constructor por defecto
-    def __init__(self, width, height):
+    def __init__(self, width, height, custome=None):
         self.__size = (width, height)
         #Titulo de la pantalla
         self.__title = "Carrera de bichos"
@@ -51,7 +51,9 @@ class Game():
         for i in range(4):
             theRunner = Runner(self.__startLine, self.__posY[i])
             theRunner.name = self.__names[i]
+            theRunner.custome = self.__custome[i]
             self.runners.append(theRunner)
+
 
     def close(self):
         pygame.quit()
@@ -101,5 +103,5 @@ class Game():
 
 if __name__ == '__main__':
     pygame.font.init()
-    game = Game(640, 480)
+    game = Game(640, 480,'turtle')
     game.competir()
