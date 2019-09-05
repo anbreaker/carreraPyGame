@@ -45,15 +45,19 @@ class Game():
                         if event.key() == K_UP:
                             # Mover Arriba
                             self.runner.position[1] -= 5
+                            pritn('le estoy dando ARRIBA')
                         elif event.key() == K_DOWN:
                             # Mover Abajo 
                             self.runner.position[1] += 5
+                            pritn('le estoy dando ABAJO')
                         elif event.key() == K_LEFT:
                             # Mover Izquierda 
                             self.runner.position[0] -= 5
+                            pritn('le estoy dando IZQUIERDA')
                         elif event.key() == K_RIGHT:                  
                             # Mover Derecha 
                             self.runner.position[0] += 5
+                            pritn('le estoy dando DERECHA')
                         else:
                             pass
 
